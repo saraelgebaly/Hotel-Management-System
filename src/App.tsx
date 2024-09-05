@@ -1,3 +1,5 @@
+import { RouterProvider, createHashRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Ads from "./Modules/Ads/Components/Ads";
 import ForgetPassword from "./Modules/Authentication/Components/ForgetPassword";
 import Login from "./Modules/Authentication/Components/Login";
@@ -21,12 +23,9 @@ import NotFound from "./Modules/Shared/NotFound";
 import ProtectedRoute from "./Modules/Shared/ProtectedRoute";
 import UserProtectedRoute from "./Modules/Shared/UserProtectedRoute";
 import Users from "./Modules/Users/Components/Users";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 function App() {
-  // const { loginData }: any = useAuth();
 
-  const routes = createBrowserRouter([
+  const routes = createHashRouter([
     {
       path: "/auth",
       element: <AuthLayout />,
