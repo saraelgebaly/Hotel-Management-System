@@ -1,0 +1,348 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.auth-input {
+  width: 100%;
+  margin: 15px 0 !important;
+  .auth-input:not(:last-child) {
+    margin: 15px 0 !important;
+  }
+}
+.inputsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.sidebar-container .ps-sidebar-container {
+  background-color: #203FC7;
+  height: 100vh;
+
+  & .ps-menu-button {
+    transition: all 0.15s;
+    -webkit-transition: all 0.15s;
+    -moz-transition: all 0.15s;
+    -ms-transition: all 0.15s;
+    -o-transition: all 0.15s;
+  }
+
+  & .ps-menu-button:hover {
+    background-color: #243892;
+  }
+}
+
+.sidebar-container button {
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.collapse-button {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+.collapse-button.expanded {
+  /*transform: scale(-1);
+  */transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+
+.reviewSec {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 90px;
+  justify-content: center;
+
+  .reviewImg {
+    max-width: 360px;
+    max-height: 450px;
+    position: relative;
+    padding-left: 40px;
+
+    .imgReview {
+      width: 100%;
+      height: 110%;
+      border-radius: 10px;
+      border-bottom-right-radius: 100px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 10px;
+      border-bottom-right-radius: 100px;
+      top: -10%;
+      left: 0;
+      right: 30px;
+      bottom: 10%;
+      border: 2px solid #e5e5e5;
+      z-index: -1;
+    }
+  }
+
+  .reviewCon {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    color: #152c5b;
+
+    .reviewTitle {
+      font-size: 30px;
+      font-weight: 500;
+      width: max-content;
+      margin-bottom: 30px;
+    }
+
+    .stars {
+      font-size: 2rem !important;
+    }
+
+    .reviewDis {
+      font-weight: 400;
+      font-size: clamp(1.9rem, 2.5vw, 3rem);
+      max-width: 500px;
+      min-width: 500px;
+    }
+
+    .reviewCap {
+      color: gray;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .reviewSec {
+    margin-top: 50px !important;
+    margin-bottom: 50px;
+  }
+
+  .reviewImg {
+    display: none;
+  }
+
+  .reviewCon {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .reviewTitle {
+    margin-bottom: 10px !important;
+  }
+
+  .reviewDis {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviewCon {
+    align-items: start;
+    width: 100%;
+  }
+
+  .reviewDis {
+    text-align: start;
+    font-size: 25px !important;
+
+    min-width: 25% !important;
+  }
+}
+
+.paymentCon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+
+  .leftCon {
+    color: white;
+
+  }
+
+  .paymentForm {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    .cardElement,
+    .AddressElement {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .paymentBtnCon {
+      display: flex;
+      justify-content: space-between;
+
+      .paymentBtn {
+        width: 45%;
+        margin-block: 20px;
+        background-color: #2196f3;
+        color: white;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+      }
+
+      .paymentBtn:hover {
+        background-color: #1565c0;
+      }
+    }
+  }
+}
+
+.Stepper {
+  width: 50%;
+  margin: auto;
+
+}
+
+.headerPay {
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+
+  .headerTitle {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #152c5b;
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+
+}
+
+.backBtn {
+  margin-top: 20px !important;
+  background-color: #3252df !important;
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 5px !important;
+  cursor: pointer;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
+.backBtn:hover {
+  background-color: #1565c0 !important;
+}
+
+@media (max-width: 960px) {
+  .Stepper {
+    width: 100%;
+  }
+
+  .paymentCon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+
+    .leftCon {
+      color: white;
+      display: none;
+
+    }
+  }
+
+  .headerPay {
+    img {
+      width: 50%;
+    }
+  }
+
+  .backBtn {
+    padding: 8px 10px !important;
+
+  }
+}
+.review {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #e5e5e5;
+  padding: 2rem 0rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  
+  p {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  .roomfeedback {
+    width: 40%;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+  .comments {
+    width: 40%;
+    margin-top: 2rem;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+  .reviewLine {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #203fc7;
+    width: 1px;
+    height: 80%;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .reviewLine {
+    display: none;
+  }
+}
+.notFound{
+  background-image: url("./assets/images/28313727.jpg");
+  background-size: cover;
+  height: 100vh;
+  
+}
