@@ -35,22 +35,21 @@ const Calendar = ({ selectedDateRange, setSelectedDateRange }: IProps) => {
 
   const openDate = Boolean(anchorEl);
   return (
-    <Box className="calendarContainer">
+    <Box  >
       <Button
         sx={{
           fontSize: { xs: "1px", sm: "1px", md: "1px" },
-          padding: {
+           padding: {
             xs: "8px 16px",
-            sm: "10px 20px",
+            sm: "10px 0px",
             md: "12px 24px",
-          },
+           },
 
-          width: { xs: "15rem", sm: "50px" },
-          height: { xs: "40px", sm: "50px" },
+          width: { xs: "80px", sm: "20px" },
+          height: { xs: "50px", sm: "50px" },
           borderRadius: "12px",
           p: "8px",
-          mr: { xs: "5px", sm: "10px" },
-          ml: "5px",
+          
           backgroundColor:"#152C5B"
         }}
         onClick={handleButtonClick}

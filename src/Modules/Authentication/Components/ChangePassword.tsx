@@ -76,11 +76,6 @@ function ChangePassword() {
             type={oldPass ? "text" : "password"}
             {...register("oldPassword", {
               required: "old password is required",
-              pattern: {
-                value: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/,
-                message:
-                  "The password must include at least one lowercase letter, one uppercase letter, one digit, one special character, and be at least 6 characters long.",
-              },
             })}
             endAdornment={
               <InputAdornment position="end">
@@ -149,7 +144,7 @@ function ChangePassword() {
                   onClick={() => setConfirmPass(!confirmPass)}
                   edge="end"
                 >
-                  {confirmPass ?  <Visibility /> : <VisibilityOff /> }
+                  {confirmPass ? <Visibility /> : <VisibilityOff />}
                 </IconButton>
               </InputAdornment>
             }
